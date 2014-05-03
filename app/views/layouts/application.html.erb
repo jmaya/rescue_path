@@ -38,11 +38,6 @@
 </head>
 
 <body>
-  <% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
-<% end %>
   <div class="container">
     <div class="row clearfix">
       <div class="col-md-12 column">
@@ -56,12 +51,15 @@
           <li class="dropdown pull-right">
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account<strong class="caret"></strong></a>
             <ul class="dropdown-menu">
-              <li>
-                <a href="#">Register</a>
+              <% if user_signed_in? %>
+                <li>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
               </li>
-              <li>
-                <a href="#">Another action</a>
+            <% else %>
+                <li>
+                <%= link_to('Login', new_user_session_path) %>
               </li>
+            <% end %>
             </ul>
           </li>
         </ul>
