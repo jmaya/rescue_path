@@ -69,7 +69,6 @@ GEM
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     ng-rails-csrf (0.1.0)
-    oauth (0.4.7)
     oauth2 (0.9.3)
       faraday (>= 0.8, < 0.10)
       jwt (~> 0.1.8)
@@ -81,19 +80,11 @@ GEM
       rack (~> 1.0)
     omniauth-facebook (1.6.0)
       omniauth-oauth2 (~> 1.1)
-    omniauth-linkedin (0.1.0)
-      omniauth-oauth (~> 1.0)
-    omniauth-oauth (1.0.1)
-      oauth
-      omniauth (~> 1.0)
     omniauth-oauth2 (1.1.2)
       faraday (>= 0.8, < 0.10)
       multi_json (~> 1.3)
       oauth2 (~> 0.9.3)
       omniauth (~> 1.2)
-    omniauth-twitter (1.0.1)
-      multi_json (~> 1.3)
-      omniauth-oauth (~> 1.0)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.4)
@@ -183,8 +174,6 @@ DEPENDENCIES
   ng-rails-csrf
   omniauth
   omniauth-facebook
-  omniauth-linkedin
-  omniauth-twitter
   pg
   puma
   rails (= 4.1.0)
