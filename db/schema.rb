@@ -17,15 +17,19 @@ ActiveRecord::Schema.define(version: 20140503153950) do
   enable_extension "plpgsql"
 
   create_table "cases", force: true do |t|
-    t.integer  "case_identifier",             null: false
-    t.integer  "timmer",          default: 5, null: false
-    t.integer  "person_id",                   null: false
+    t.integer  "case_identifier",                null: false
+    t.integer  "timmer",          default: 5,    null: false
+    t.integer  "person_id",                      null: false
+    t.integer  "user_id",                        null: false
+    t.boolean  "active",          default: true, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "clues", force: true do |t|
     t.text     "info",       null: false
+    t.integer  "user_id",    null: false
+    t.integer  "case_id",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -46,12 +50,14 @@ ActiveRecord::Schema.define(version: 20140503153950) do
   create_table "people", force: true do |t|
     t.string   "first_name",                null: false
     t.string   "last_name",                 null: false
-    t.integer  "age",                       null: false
+    t.string   "age",                       null: false
     t.string   "hair_color",                null: false
+    t.string   "eye_color",                 null: false
     t.string   "height",                    null: false
     t.string   "weight",                    null: false
     t.string   "race",                      null: false
     t.string   "visual_characteristics"
+    t.string   "sex",                       null: false
     t.text     "last_seen_location",        null: false
     t.date     "last_seen_date",            null: false
     t.text     "notes"

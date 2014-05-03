@@ -12,5 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require jquery.ui.all
+//= require bootstrap
 //= require_tree .
+
+$( document).ready(function() {
+  $('#last_seen_date').datepicker();
+
+})

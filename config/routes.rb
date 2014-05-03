@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+
+  get 'people/new'
+
+  get 'people/create'
+
   get 'welcome/index'
+  resources :cases
   resources :people
   resources :cases
   resources :clues

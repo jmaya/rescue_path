@@ -1,0 +1,256 @@
+<%
+    @ages = (1..100).to_a
+    @sexes = [ "Male", "Female"]
+    @hair_colors = %w[
+      Blond
+      Brown
+      Black
+      Red
+      White
+      Other
+    ]
+
+    @eye_colors = %w[
+      Blue
+      Brown
+      Black
+      Green
+      Hazel
+      Other
+    ]
+    @heights = %w[
+     4'
+     4'2
+     4'4
+     4'6
+     4'8
+     4'10
+     5'
+     5'2
+     5'4
+     5'6
+     5'8
+     5'10
+     6'
+     6'2
+     6'4
+     6'6
+     6'8
+     6'10
+     7'
+     7'+
+       ]
+
+    @weights = %w[
+     50lbs
+     60lbs
+     70lbs
+     80lbs
+     90lbs
+     100lbs
+     110lbs
+     120lbs
+     130lbs
+     140lbs
+     150lbs
+     160lbs
+     170lbs
+     180lbs
+     190lbs
+     200lbs
+     210lbs
+     220lbs
+     230lbs
+     240lbs
+     250lbs
+     260lbs
+     270lbs
+     280lbs
+     290lbs
+     300lbs
+     300+lbs
+    ]
+    @races = %w[
+      Hispanic
+      White
+      Black
+      Asian
+    ]
+    @races <<  "Native American"
+
+    @builds = %w[
+      Muscular
+      Weak
+      Skinny
+      Thick
+    ]
+
+    @relationsips = %w[
+    Mother
+    Father
+    Son
+    Daughter
+    Sibling
+    Cousin
+    Grandfather
+    Grandmother
+    Spouse
+    Fiancee
+    ] %>
+
+<%= simple_form_for @person do |f| %>
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>New Report</legend>
+
+<!-- File Button -->
+<div class="control-group">
+  <label class="control-label" for="filebutton"></label>
+  <div class="controls">
+    <input id="filebutton" name="filebutton" class="input-file" type="file">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="firstName"></label>
+  <div class="controls">
+    <!-- <input id="firstName" name="firstName" type="text" placeholder="First Name" class="input&#45;xlarge" required=""> -->
+    <%= f.text_field(:first_name, placeholder:"First Name", class:"input-xlarge error") %>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="lastName"></label>
+  <div class="controls">
+    <!-- <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="input&#45;xlarge" required=""> -->
+    <%= f.text_field(:last_name, placeholder:"Last Name", class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="Age">Age</label>
+  <div class="controls">
+    <%= f.select(:age, @ages, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="sex">Sex</label>
+  <div class="controls">
+    <%= f.select(:sex, @sexes, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="hairColor">Hair Color</label>
+  <div class="controls">
+    <%= f.select(:hair_color, @hair_colors, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="eyeColor">Eye Color</label>
+  <div class="controls">
+    <%= f.select(:eye_color, @eye_colors, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="height">Heigth</label>
+  <div class="controls">
+    <%= f.select(:height, @heights, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="weight">Weight</label>
+  <div class="controls">
+    <%= f.select(:weight, @weights, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="race">Race</label>
+  <div class="controls">
+    <%= f.select(:race, @races, class:"input-xlarge") %>
+</div>
+<!-- Multiple Checkboxes -->
+<div class="control-group">
+  <label class="control-label" for="visualCharacteristics">Visual Characteristics</label>
+  <div class="controls">
+    <label class="checkbox" for="visual_characteristics-0">
+      <input type="checkbox" name="person[visual_characteristics]" id="visual_characteristics-0" value="Scars">
+      Scars
+    </label>
+    <label class="checkbox" for="visual_characteristics-1">
+      <input type="checkbox" name="person[visual_characteristics]" id="visualCharacteristics-1" value="Piercings">
+      Piercings
+    </label>
+    <label class="checkbox" for="visual_characteristics-2">
+      <input type="checkbox" name="person[visual_characteristics]" id="visualCharacteristics-2" value="Tattoos">
+      Tattoos
+    </label>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="lastSeen">Last Seen</label>
+  <div class="controls">
+    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge") %>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label" for="lastSeen">Last Seen</label>
+  <div class="controls">
+    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="build">Build</label>
+  <div class="controls">
+    <%= f.select(:build_type, @builds, class:"input-xlarge") %>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="control-group">
+  <label class="control-label" for="relation">Relationship to this Person</label>
+  <div class="controls">
+    <%= f.select(:relationship_to_submitter, @relationsips, class:"input-xlarge") %>
+    </select>
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="control-group">
+  <label class="control-label" for="notes">Notes</label>
+  <div class="controls">
+    <%= f.text_area :notes, placeholder:"Add any extra information that might help." %>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="control-group">
+  <label class="control-label" for="submit"></label>
+  <div class="controls">
+    <button id="submit" name="submit" class="btn btn-success">Next --&gt;</button>
+  </div>
+</div>
+
+</fieldset>
+<% end %>

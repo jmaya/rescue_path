@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="591210476">
+    <data-source source="LOCAL" name="Rails rescue_path: development" uuid="35f5d993-e689-42cd-813d-97c35056e671">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rescue_path_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails rescue_path: test" uuid="ab804305-3966-4c51-b39e-c9571202053a">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:rescue_path_test</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

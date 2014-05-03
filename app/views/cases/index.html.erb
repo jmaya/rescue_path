@@ -1,0 +1,12 @@
+<ul>
+<% @cases.each do |c| %>
+  <li>
+    <span>
+    Case: <%= c.case_identifier %><br/>
+    <%= c.person.first_name%>
+    <%= c.person.last_name%>,<%= c.person.age %> yrs <br/>
+    Last Seen: <%= c.person.last_seen_location %>
+    </span>
+</li>
+<% end %>
+</ul>
