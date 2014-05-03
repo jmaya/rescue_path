@@ -7,6 +7,8 @@ gem 'rails', '4.1.0'
 gem 'pg'
 gem 'puma'
 
+gem 'devise'
+
 gem 'ng-rails-csrf'
 
 gem 'rails_12factor'
@@ -44,3 +46,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development do
+  gem 'rspec-rails'
+end
