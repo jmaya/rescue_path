@@ -12,6 +12,10 @@ gem 'devise'
 gem 'ng-rails-csrf'
 
 gem 'rails_12factor'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
