@@ -28,6 +28,7 @@ person = Person.create!(
 
 c = Case.create!(
   case_identifier: 'RandomCase1234',
+  notes:'This is a sample note for the case',
   person: person,
   user: user
 )

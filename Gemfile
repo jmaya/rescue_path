@@ -18,6 +18,7 @@ gem 'bootstrap3-rails'
 gem 'simple_form'
 gem 'jquery-ui-rails'
 
+gem 'awesome_print'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'

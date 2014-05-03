@@ -5,6 +5,7 @@ class CreatePeople < ActiveRecord::Migration
       t.string :last_name, null:false
       t.string :age, null:false
       t.string :hair_color, null:false
+      t.string :image_url
       t.string :eye_color, null:false
       t.string :height, null:false
       t.string :weight, null:false

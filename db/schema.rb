@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20140503153950) do
 
   create_table "cases", force: true do |t|
     t.integer  "case_identifier",                null: false
+    t.text     "notes",                          null: false
     t.integer  "timmer",          default: 5,    null: false
     t.integer  "person_id",                      null: false
     t.integer  "user_id",                        null: false
@@ -52,6 +53,7 @@ ActiveRecord::Schema.define(version: 20140503153950) do
     t.string   "last_name",                 null: false
     t.string   "age",                       null: false
     t.string   "hair_color",                null: false
+    t.string   "image_url"
     t.string   "eye_color",                 null: false
     t.string   "height",                    null: false
     t.string   "weight",                    null: false

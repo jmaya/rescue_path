@@ -1,12 +1,32 @@
-<ul>
 <% @cases.each do |c| %>
-  <li>
-    <span>
-    Case: <%= c.case_identifier %><br/>
-    <%= c.person.first_name%>
-    <%= c.person.last_name%>,<%= c.person.age %> yrs <br/>
-    Last Seen: <%= c.person.last_seen_location %>
-    </span>
-</li>
+<div class="row clearfix">
+  <div class="col-md-4 column">
+    <img alt="140x140" src="<%= c.person.image_url %>" class="img-circle"> <span class="label label-danger">MISSING</span>
+    <h2>
+      <%= c.person.first_name %> <%= c.person.last_name %>
+    </h2>
+    <p>
+      <%= c.notes %>
+    </p>
+    <p>
+      <a class="btn" href="#">Read Case »</a>
+    </p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= c.person.age %> yrs old
+        </h3>
+      </div>
+      <div class="panel-body">
+        <%= c.person.sex %>
+      </div>
+      <div class="panel-footer">
+        Last seen: <%= c.person.last_seen_location %> on <%= c.person.last_seen_date.to_s(:db) %>
+      </div>
+    </div> <button type="button" class="btn btn-block btn-lg btn-success">+Add Clue</button>
+
+  </div>
+  <hr />
+</div>
 <% end %>
-</ul>
+
