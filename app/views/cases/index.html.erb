@@ -23,7 +23,8 @@
       <div class="panel-footer">
         Last seen: <%= c.person.last_seen_location %> on <%= c.person.last_seen_date.to_s(:db) %>
       </div>
-    </div> <button type="button" class="btn btn-block btn-lg btn-success">+Add Clue</button>
+    </div>
+   <%= link_to "+Add Clue", new_clue_path, class:"btn btn-block btn-lg btn-success" %>
 
   </div>
   <hr />
