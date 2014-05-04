@@ -44,9 +44,6 @@
           <li>
             <%= link_to "New Report", new_person_path%>
           </li>
-          <li>
-            <%= link_to "Settings", new_user_notification_path%>
-          </li>
           <% if user_signed_in? %>
             <li class="pull-right">
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
