@@ -12,11 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.ui.datepicker
 //= require bootstrap
 //= require_tree .
 
 $( document).ready(function() {
-  $('#last_seen_date').datepicker();
+  $('#person_last_seen_location').datepicker();
 
 })

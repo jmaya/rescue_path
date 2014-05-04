@@ -105,14 +105,21 @@
 <legend>New Report</legend>
 
 <!-- File Button -->
+<!-- <div class="control&#45;group"> -->
+<!--   <label class="control&#45;label" for="filebutton"></label> -->
+<!--   <div class="controls"> -->
+<!--     <input id="filebutton" name="filebutton" class="input&#45;file" type="file"> -->
+<!--   </div> -->
+<!-- </div> -->
+<!--  -->
+<!-- Text input-->
 <div class="control-group">
-  <label class="control-label" for="filebutton"></label>
+  <label class="control-label" for="image_url"></label>
   <div class="controls">
-    <input id="filebutton" name="filebutton" class="input-file" type="file">
+    <%= f.input(:image_url, label:false, placeholder:"Image URL", input_html:{class:"form-control input-xlarge error"}) %>
   </div>
 </div>
 
-<!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="firstName"></label>
   <div class="controls">
@@ -208,14 +215,14 @@
 <div class="control-group">
   <label class="control-label" for="lastSeen">Last Seen</label>
   <div class="controls">
-    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge form-control") %>
+    <%= f.input(:last_seen_location, placeholder:"Where was this person last seen?", input_html:{class:"input-xlarge form-control"}, label:false) %>
   </div>
 </div>
 
 <div class="control-group">
-  <label class="control-label" for="lastSeen">Last Seen</label>
+  <label class="control-label" for="lastSeen">When was this person last seen</label>
   <div class="controls">
-    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge form-control") %>
+    <%= f.input(:last_seen_date, placeholder:"When last seen?", class:"input-xlarge form-control", label:false) %>
   </div>
 </div>
 
