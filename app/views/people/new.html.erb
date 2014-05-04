@@ -98,7 +98,7 @@
     Fiancee
     ] %>
 
-  <%= simple_form_for(@person, html:{class:"form-horizontal"}) do |f| %>
+  <%= simple_form_for(@person, input_html:{class:"form-horizontal"}) do |f| %>
 <fieldset>
 
 <!-- Form Name -->
@@ -117,7 +117,7 @@
   <label class="control-label" for="firstName"></label>
   <div class="controls">
     <!-- <input id="firstName" name="firstName" type="text" placeholder="First Name" class="input&#45;xlarge" required=""> -->
-    <%= f.text_field(:first_name, placeholder:"First Name", class:"input-xlarge error") %>
+    <%= f.input(:first_name, label:false, placeholder:"First Name", input_html:{class:"input-xlarge error"}) %>
   </div>
 </div>
 
@@ -126,7 +126,7 @@
   <label class="control-label" for="lastName"></label>
   <div class="controls">
     <!-- <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="input&#45;xlarge" required=""> -->
-    <%= f.text_field(:last_name, placeholder:"Last Name", class:"input-xlarge") %>
+    <%= f.input(:last_name, label:false, placeholder:"Last Name", input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -134,7 +134,7 @@
 <div class="control-group">
   <label class="control-label" for="Age">Age</label>
   <div class="controls">
-    <%= f.select(:age, @ages, class:"input-xlarge") %>
+    <%= f.input(:age, collection:@ages, label:false,input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -142,7 +142,7 @@
 <div class="control-group">
   <label class="control-label" for="sex">Sex</label>
   <div class="controls">
-    <%= f.select(:sex, @sexes, class:"input-xlarge") %>
+    <%= f.input(:sex, collection:@sexes, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -150,7 +150,7 @@
 <div class="control-group">
   <label class="control-label" for="hairColor">Hair Color</label>
   <div class="controls">
-    <%= f.select(:hair_color, @hair_colors, class:"input-xlarge") %>
+    <%= f.input(:hair_color, collection:@hair_colors, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -158,7 +158,7 @@
 <div class="control-group">
   <label class="control-label" for="eyeColor">Eye Color</label>
   <div class="controls">
-    <%= f.select(:eye_color, @eye_colors, class:"input-xlarge") %>
+    <%= f.input(:eye_color, collection:@eye_colors, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -166,7 +166,7 @@
 <div class="control-group">
   <label class="control-label" for="height">Heigth</label>
   <div class="controls">
-    <%= f.select(:height, @heights, class:"input-xlarge") %>
+    <%= f.input(:height, collection:@heights, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -174,7 +174,7 @@
 <div class="control-group">
   <label class="control-label" for="weight">Weight</label>
   <div class="controls">
-    <%= f.select(:weight, @weights, class:"input-xlarge") %>
+    <%= f.input(:weight, collection:@weights, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -182,13 +182,14 @@
 <div class="control-group">
   <label class="control-label" for="race">Race</label>
   <div class="controls">
-    <%= f.select(:race, @races, class:"input-xlarge") %>
+    <%= f.input(:race, collection:@races, label:false, input_html:{class:"input-xlarge"}) %>
 </div>
 <!-- Multiple Checkboxes -->
 <div class="control-group">
   <label class="control-label" for="visualCharacteristics">Visual Characteristics</label>
   <div class="controls">
     <label class="checkbox" for="visual_characteristics-0">
+      <%# <%= f.input(:visual_characteristics, collection:["Scars", "Piercings", "Tatoos"],label:false, as: :boolean) %>
       <input type="checkbox" name="person[visual_characteristics]" id="visual_characteristics-0" value="Scars">
       Scars
     </label>
@@ -222,7 +223,7 @@
 <div class="control-group">
   <label class="control-label" for="build">Build</label>
   <div class="controls">
-    <%= f.select(:build_type, @builds, class:"input-xlarge") %>
+    <%= f.input(:build_type, collection:@builds, label:false, input_html:{class:"input-xlarge"}) %>
   </div>
 </div>
 
@@ -230,7 +231,7 @@
 <div class="control-group">
   <label class="control-label" for="relation">Relationship to this Person</label>
   <div class="controls">
-    <%= f.select(:relationship_to_submitter, @relationsips, class:"input-xlarge") %>
+    <%= f.input(:relationship_to_submitter, collection:@relationsips, label:false, input_html:{class:"input-xlarge"}) %>
     </select>
   </div>
 </div>
@@ -239,7 +240,7 @@
 <div class="control-group">
   <label class="control-label" for="notes">Notes</label>
   <div class="controls">
-    <%= f.text_area :notes, placeholder:"Add any extra information that might help." %>
+    <%= f.input(:notes, placeholder:"Add any extra information that might help.", label:false )%>
   </div>
 </div>
 
