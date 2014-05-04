@@ -116,8 +116,8 @@
 <div class="control-group">
   <label class="control-label" for="firstName"></label>
   <div class="controls">
-    <!-- <input id="firstName" name="firstName" type="text" placeholder="First Name" class="input&#45;xlarge" required=""> -->
-    <%= f.input(:first_name, label:false, placeholder:"First Name", input_html:{class:"input-xlarge error"}) %>
+    <!-- <input id="firstName" name="firstName" type="text" placeholder="First Name" class="input&#45;xlarge form-control" required=""> -->
+    <%= f.input(:first_name, label:false, placeholder:"First Name", input_html:{class:"form-control input-xlarge error"}) %>
   </div>
 </div>
 
@@ -126,7 +126,7 @@
   <label class="control-label" for="lastName"></label>
   <div class="controls">
     <!-- <input id="lastName" name="lastName" type="text" placeholder="Last Name" class="input&#45;xlarge" required=""> -->
-    <%= f.input(:last_name, label:false, placeholder:"Last Name", input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:last_name, label:false, placeholder:"Last Name", input_html:{class:"form-control input-xlarge"}) %>
   </div>
 </div>
 
@@ -134,7 +134,7 @@
 <div class="control-group">
   <label class="control-label" for="Age">Age</label>
   <div class="controls">
-    <%= f.input(:age, collection:@ages, label:false,input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:age, collection:@ages, label:false,input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -142,7 +142,7 @@
 <div class="control-group">
   <label class="control-label" for="sex">Sex</label>
   <div class="controls">
-    <%= f.input(:sex, collection:@sexes, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:sex, collection:@sexes, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -150,7 +150,7 @@
 <div class="control-group">
   <label class="control-label" for="hairColor">Hair Color</label>
   <div class="controls">
-    <%= f.input(:hair_color, collection:@hair_colors, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:hair_color, collection:@hair_colors, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -158,7 +158,7 @@
 <div class="control-group">
   <label class="control-label" for="eyeColor">Eye Color</label>
   <div class="controls">
-    <%= f.input(:eye_color, collection:@eye_colors, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:eye_color, collection:@eye_colors, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -166,7 +166,7 @@
 <div class="control-group">
   <label class="control-label" for="height">Heigth</label>
   <div class="controls">
-    <%= f.input(:height, collection:@heights, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:height, collection:@heights, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -174,7 +174,7 @@
 <div class="control-group">
   <label class="control-label" for="weight">Weight</label>
   <div class="controls">
-    <%= f.input(:weight, collection:@weights, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:weight, collection:@weights, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -182,7 +182,7 @@
 <div class="control-group">
   <label class="control-label" for="race">Race</label>
   <div class="controls">
-    <%= f.input(:race, collection:@races, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:race, collection:@races, label:false, input_html:{class:"input-xlarge form-control"}) %>
 </div>
 <!-- Multiple Checkboxes -->
 <div class="control-group">
@@ -208,14 +208,14 @@
 <div class="control-group">
   <label class="control-label" for="lastSeen">Last Seen</label>
   <div class="controls">
-    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge") %>
+    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge form-control") %>
   </div>
 </div>
 
 <div class="control-group">
   <label class="control-label" for="lastSeen">Last Seen</label>
   <div class="controls">
-    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge") %>
+    <%= f.text_field(:last_seen_location, placeholder:"Where was this person last seen?", class:"input-xlarge form-control") %>
   </div>
 </div>
 
@@ -223,7 +223,7 @@
 <div class="control-group">
   <label class="control-label" for="build">Build</label>
   <div class="controls">
-    <%= f.input(:build_type, collection:@builds, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:build_type, collection:@builds, label:false, input_html:{class:"input-xlarge form-control"}) %>
   </div>
 </div>
 
@@ -231,7 +231,7 @@
 <div class="control-group">
   <label class="control-label" for="relation">Relationship to this Person</label>
   <div class="controls">
-    <%= f.input(:relationship_to_submitter, collection:@relationsips, label:false, input_html:{class:"input-xlarge"}) %>
+    <%= f.input(:relationship_to_submitter, collection:@relationsips, label:false, input_html:{class:"input-xlarge form-control"}) %>
     </select>
   </div>
 </div>
