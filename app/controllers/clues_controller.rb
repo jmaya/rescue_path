@@ -12,7 +12,7 @@ class CluesController < ApplicationController
     respond_to do |format|
       if @clue.save
         User.all.each do |u|
-          UserMailer.notification_email(u,@clue.case)
+          UserMailer.notification_email(u,@clue.case).deliver
         end
         format.html { redirect_to case_path(@clue.case), notice: 'The case was successfully created.' }
       else
