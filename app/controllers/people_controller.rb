@@ -21,6 +21,6 @@ class PeopleController < ApplicationController
   def person_params
     params.require(:person).permit(:first_name,:last_name,:age,:hair_color,:eye_color,:height,:weight,
                                    :race,:visual_characteristics,:sex,:last_seen_location,:last_seen_date,
-                                   :notes,:build_type,:relationship_to_submitter)
+                                   :notes,:build_type,:relationship_to_submitter,:image_url)
   end
 end

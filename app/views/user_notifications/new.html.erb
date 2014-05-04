@@ -1,0 +1,19 @@
+<div class="row clearfix">
+  <div class="col-md-12 column">
+    <div class="page-header">
+      <h1>
+        Notifications
+      </h1>
+    </div>
+    <div class="">
+    </div>
+  <%= simple_form_for(@user_notification, input_html:{class:"form-horizontal"}) do |f| %>
+    <h3>
+      <input type="checkbox" name="user_notification[visual_characteristics]" id="visual_characteristics-0" value="Facebook Friends + Friends"> Facebook Friends + Friends</input>
+    </h3>
+    <h3>
+      <input type="checkbox" name="user_notification[visual_characteristics]" id="visual_characteristics-0" value="My City"> My City</input>
+    </h3> <button type="button" class="btn-block btn btn-lg btn-primary">Subscribe</button>
+  <% end %>
+  </div>
+</div>

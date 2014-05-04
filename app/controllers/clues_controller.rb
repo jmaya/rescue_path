@@ -11,6 +11,9 @@ class CluesController < ApplicationController
 
     respond_to do |format|
       if @clue.save
+        User.all.each do |u|
+          UserMailer.notification_email(u,@clue.case)
+        end
         format.html { redirect_to case_path(@clue.case), notice: 'The case was successfully created.' }
       else
         format.html { render :new }
