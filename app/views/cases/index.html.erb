@@ -8,7 +8,12 @@
     <p>
       <%= c.notes %>
     </p>
+    <% if c.clues.size > 0 %>
+    <div class="alert alert-dismissable alert-info">
+				<span><strong>+<%= c.clues.size %> clue/s has been added to this case.</strong></span>
+			</div>
     <p>
+    <% end %>
       <%=link_to "Read Case",case_path(c), class:"btn"  %>
     </p>
     <div class="panel panel-default">
