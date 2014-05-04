@@ -1,0 +1,119 @@
+<div class="row clearfix">
+  <div class="col-md-4 column">
+    <img alt="140x140" src="http://lorempixel.com/140/140/" class="img-circle" /> <span class="label label-danger">MISSING</span>
+    <h2>
+      <%= @case.person.first_name %> <%= @case.person.last_name %>
+    </h2>
+    <p>
+      <%= @case.notes %>
+    </p>
+
+    <p>
+      <a class="btn" href="#"></a>
+    </p>
+    <h3>
+      Clues by others
+    </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            By
+          </th>
+          <th>
+            Clue
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @case.clues.each do |clue| %>
+        <tr>
+          <td>
+            <%= clue.user.email %>
+          </td>
+          <td>
+            <%= clue.info %>
+          </td>
+          <td>
+            <%= @case.person.age %>
+          </td>
+          <td>
+            Missing
+          </td>
+        </tr>
+      <% end %>
+        <!-- <tr class="active"> -->
+        <!--   <td> -->
+        <!--     Paula W. -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     I think I saw a suspicious Ice cream truck on walmart late at night with a kid as copilot. -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     5/03/2014 -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     Missing -->
+        <!--   </td> -->
+        <!-- </tr> -->
+        <!-- <tr class="success"> -->
+        <!--   <td> -->
+        <!--     Jason P. -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     Andrew is -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     5/09/2014 -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--     Found -->
+        <!--   </td> -->
+        <!-- </tr> -->
+        <!-- <tr class="warning"> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!-- </tr> -->
+        <!-- <tr class="danger"> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!--   <td> -->
+        <!--   </td> -->
+        <!-- </tr> -->
+      </tbody>
+    </table>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= @case.person.age %>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <%= @case.person.sex %>
+      </div>
+      <div class="panel-footer">
+        Last seen: <%= @case.person.last_seen_location %>
+      </div>
+    </div> <%= link_to "+Add Clue", new_clue_path(case_id:@case.id), class:"btn btn-block btn-lg btn-success" %>
+  </div>
+  <div class="col-md-4 column">
+  </div>
+  <div class="col-md-4 column">
+  </div>
+</div>

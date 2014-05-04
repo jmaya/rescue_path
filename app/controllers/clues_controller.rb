@@ -11,7 +11,7 @@ class CluesController < ApplicationController
 
     respond_to do |format|
       if @clue.save
-        format.html { redirect_to root_path, notice: 'The case was successfully created.' }
+        format.html { redirect_to case_path(@clue.case), notice: 'The case was successfully created.' }
       else
         format.html { render :new }
       end
