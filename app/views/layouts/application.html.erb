@@ -34,15 +34,6 @@
 </head>
 
 <body>
-  <% if user_signed_in? %>
-    <li>
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-  </li>
-<% else %>
-    <li>
-    <%= link_to('Login', new_user_session_path) %>
-  </li>
-<% end %>
   <div class="container">
     <div class="row clearfix">
       <div class="col-md-12 column">
@@ -53,15 +44,12 @@
           <li>
             <%= link_to "New Report", new_case_path %>
           </li>
-          <li class="dropdown pull-right">
-            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Account<strong class="caret"></strong></a>
-            <ul class="dropdown-menu">
               <% if user_signed_in? %>
-                <li>
+                <li class="pull-right">
                 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
               </li>
             <% else %>
-                <li>
+                <li class="pull-right">
                 <%= link_to('Login', new_user_session_path) %>
               </li>
             <% end %>

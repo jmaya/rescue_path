@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<%= simple_form_for(@clue, input_html:{class:"form-horizontal"}) do |f| %>
 <fieldset>
 
 <!-- Form Name -->
@@ -7,8 +7,10 @@
 <!-- Textarea -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea"></label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" id="textarea" name="textarea">Please explain here...what you've seen or know...</textarea>
+  <div class="col-md-4">
+    <!-- <textarea class="form&#45;control" id="textarea" name="textarea">Please explain here...what you've seen or know...</textarea> -->
+    <%= f.text_area(:info, placeholder:"Please explain here...what you've seen or know...", class:"input-xlarge error form-control" ) %>
+    <%= f.hidden_field(:case_id, value:params[:case_id] ) %>
   </div>
 </div>
 
@@ -32,5 +34,4 @@
 </div>
 
 </fieldset>
-</form>
-
+<% end %>
