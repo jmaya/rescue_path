@@ -8,7 +8,7 @@
 
 user = User.new(:email => 'test@test.com', password:'Password1', password_confirmation:'Password1')
 
-user.skip_confirmation!
+# user.skip_confirmation!
 user.save!
 
 person = Person.create!(

@@ -8,6 +8,7 @@ gem 'pg'
 # gem 'puma'
 
 gem 'devise'
+gem 'dotenv-rails'
 
 gem 'ng-rails-csrf'
 
